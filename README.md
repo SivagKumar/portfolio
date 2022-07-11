@@ -7,7 +7,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Screenshots</a></li>
+        <li><a href="#Screenshots">Screenshots</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -26,7 +26,7 @@
 ## About The Project
 
 [//]: # (TODO: update link)
-First version of <a href="">link</a>
+First version of <a href="https://react-portfolio-30258.web.app/">portfolio</a>
 
 ### Screenshots
 

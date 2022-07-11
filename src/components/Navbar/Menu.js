@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Tab, Tabs, Button, makeStyles, withStyles, Link as MuiLink } from "@material-ui/core";
-import { motion, useAnimation } from "framer-motion";
-import { Link, Events } from "react-scroll";
+import React, {useContext, useEffect, useState} from "react";
+import {makeStyles, Tab, Tabs, withStyles} from "@material-ui/core";
+import {motion, useAnimation} from "framer-motion";
+import {Events, Link} from "react-scroll";
 import LangSelector from "./LangSelector";
 import LoaderContext from "../../contexts/loaderContext";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 
 const smoothScrollProps = {
     spy: true,

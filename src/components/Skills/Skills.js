@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import { Typography, makeStyles, Box, useTheme, Paper } from "@material-ui/core";
+import {Box, makeStyles, Paper, Typography} from "@material-ui/core";
 import ProgressBar from "./ProgressBar";
 
 function LinearProgressWithLabel({ title, value }) {
