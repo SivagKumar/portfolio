@@ -1,7 +1,6 @@
-import React from "react";
+import {useEffect, useState} from "react";
 import { Typography, makeStyles, Box, useTheme, Paper } from "@material-ui/core";
 import ProgressBar from "./ProgressBar";
-import { skillsList } from "../../data";
 
 function LinearProgressWithLabel({ title, value }) {
     const classes = useStyles();
@@ -21,11 +20,50 @@ function LinearProgressWithLabel({ title, value }) {
 
 const Skills = () => {
     const classes = useStyles();
-    const theme = useTheme();
+    const [skills, setSkills] = useState([]);
+    const [isFetching, setIsFetching] = useState(true);
+    const [httpError, setHttpError] = useState(null);
+
+    useEffect(() => {
+        const fetchSkills = async () => {
+            const response = await fetch('https://react-portfolio-30258-default-rtdb.firebaseio.com/skills.json');
+            if (!response.ok) {
+                throw new Error("Something went wrong!")
+            }
+
+            const responseData = await response.json();
+
+            const loadedSkills = [];
+            for (const key in responseData) {
+                loadedSkills.push({
+                    id: key,
+                    title: responseData[key].title,
+                    value: responseData[key].value
+                });
+            }
+            setSkills(loadedSkills);
+            setIsFetching(false);
+        };
+
+        fetchSkills().catch((error) => {
+            setIsFetching(false);
+            setHttpError(error.message);
+        });
+
+    }, []);
+
+    if (isFetching) {
+        return (<section><p>loading...</p></section>)
+    }
+
+    if (httpError) {
+        return (<section><p>{httpError}</p></section>)
+    }
+
     return (
         <div className={classes.container}>
-            {skillsList.map((elem, k) => (
-                <Paper elevation={10} key={k} className={classes.paper}>
+            {skills.map((elem) => (
+                <Paper elevation={10} key={elem.id} className={classes.paper}>
                     <Typography align="center" >{elem.title}</Typography>
                 </Paper>
             ))}

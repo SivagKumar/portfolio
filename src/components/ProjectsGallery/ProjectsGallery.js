@@ -1,15 +1,55 @@
-import React, { useState } from "react";
+import {useEffect, useState} from "react";
 import { AnimatePresence, AnimateSharedLayout} from "framer-motion";
 import { Grid, makeStyles } from "@material-ui/core";
 import Card from "./Card";
 import ExtendedCard from "./ExtendedCard";
-import { projectList } from "../../data";
 import { useTranslation } from "react-i18next";
 
 const ProjectsGallery = () => {
     const classes = useStyles();
     const { t } = useTranslation()
     const [selectedId, setSelectedId] = useState(null);
+    const [projectList, setProjectList] = useState([]);
+    const [isFetching, setIsFetching] = useState(true);
+    const [httpError, setHttpError] = useState(null);
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            const response = await fetch('https://react-portfolio-30258-default-rtdb.firebaseio.com/projects.json');
+            if (!response.ok) {
+                throw new Error("Something went wrong!")
+            }
+
+            const responseData = await response.json();
+
+            const loadedProjects = [];
+            for (const key in responseData) {
+                loadedProjects.push({
+                    id: key,
+                    title: responseData[key].title,
+                    backgroundImage: responseData[key].backgroundImage,
+                    frontImage: responseData[key].frontImage,
+                    technologies: responseData[key].technologies
+                });
+            }
+            setProjectList(loadedProjects);
+            setIsFetching(false);
+        };
+
+        fetchProjects().catch((error) => {
+            setIsFetching(false);
+            setHttpError(error.message);
+        });
+
+    }, []);
+
+    if (isFetching) {
+        return (<section><p>loading...</p></section>)
+    }
+
+    if (httpError) {
+        return (<section><p>{httpError}</p></section>)
+    }
 
     const getSelected = (id) => projectList.find((elem) => elem.id === id);
     return (

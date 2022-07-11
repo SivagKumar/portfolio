@@ -7,7 +7,6 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Forking this project</a></li>
         <li><a href="#built-with">Screenshots</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -18,7 +17,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -34,11 +32,11 @@ First version of <a href="">link</a>
 
 <p align="center">
   <p align="center">Light Mode</p>
-  <img src="screenshots/light.png" alt="Home section">
+  <img src="screenshots/home_light.png" alt="Home section">
    </p>
 <p align="center">
   <p align="center">Home Section</p>
-  <img src="screenshots/home.png" alt="Home section">
+  <img src="screenshots/home_dark.png" alt="Home section">
    </p>
 <br />
 <p align="center">
@@ -65,7 +63,6 @@ First version of <a href="">link</a>
 
 * [React JS](https://reactjs.org/)
 * [Material UI](https://material-ui.com/)
-* [Framer Motion](https://www.framer.com/motion/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
