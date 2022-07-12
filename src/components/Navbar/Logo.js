@@ -6,10 +6,6 @@ const Logo = ({ setHomeIsActive, ...rest }) => {
     const classes = useStyles();
     return (
         <Link
-            spy
-            smooth
-            duration={500}
-            offset={-70}
             to="home"
             onSetActive={() => setHomeIsActive(true)}
             onSetInactive={() => setHomeIsActive(false)}

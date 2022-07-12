@@ -38,17 +38,6 @@ const MobileMenu = ({ open, onClose, onOpen }) => {
                         {t('menu_contact')}
                     </ListItem>
                     <ListItem className={classes.btnContainer}>
-                        <Button
-                            component={MuiLink}
-                            href="/resume.pdf"
-                            variant="outlined"
-                            color="primary"
-                            underline="none"
-                            >
-                            {t('menu_resume')}
-                        </Button>
-                    </ListItem>
-                    <ListItem className={classes.btnContainer}>
                         <LangSelector onClose={onClose} />
                     </ListItem>
                     <ListItem className={classes.btnContainer}>
