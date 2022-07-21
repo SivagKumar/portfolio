@@ -25,7 +25,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[//]: # (TODO: update link)
 First version of <a href="https://react-portfolio-30258.web.app/">portfolio</a>
 
 ### Screenshots
