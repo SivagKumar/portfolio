@@ -1,0 +1,75 @@
+{
+    "experience": [
+      {
+        "company": "Paymentus",
+        "links": {
+          "linkedIn": "https://www.paymentus.com/",
+          "website": "https://www.paymentus.com/"
+        }
+      },
+      {
+        "company": "Identos",
+        "links": {
+          "linkedIn": "https://www.linkedin.com/company/identos-inc/",
+          "website": "https://www.identos.ca/"
+        }
+      },
+      {
+        "company": "Capgemini",
+        "links": {
+          "linkedIn": "https://www.linkedin.com/company/capgemini/",
+          "website": "https://www.capgemini.com/"
+        }
+      }
+    ],
+    "projects": {
+      "p1": {
+        "backgroundImage": "https://cdn.cbeditz.com/cbeditz/preview/black-red-gradient-background-wallpaper-74-11614352798fbqrv1wpuv.jpg",
+        "frontImage": "https://firebasestorage.googleapis.com/v0/b/react-portfolio-30258.appspot.com/o/food_order.jpg?alt=media",
+        "technologies": [
+          "React JS, Serverless API"
+        ],
+        "title": "Food Ordering Website"
+      },
+      "p2": {
+        "backgroundImage": "https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg?size=626&ext=jpg&ga=GA1.2.2102900112.1628985600",
+        "frontImage": "https://i.ibb.co/zNMJFTW/Webp-net-resizeimage.png",
+        "technologies": [
+          "React JS"
+        ],
+        "title": "Code Hub"
+      },
+      "p3": {
+        "backgroundImage": "https://media.istockphoto.com/vectors/abstract-purple-vector-background-with-stripes-vector-id972475894?k=6&m=972475894&s=612x612&w=0&h=99AirGMOb64N2-1ZSMYRjEBp2USrAdzXUGzQMh5o6Js=",
+        "frontImage": "https://themes-backend.material-ui.com/wp-content/uploads/2021/05/01_preview.jpg",
+        "technologies": [
+          "React JS",
+          "Node JS",
+          "MongoDB"
+        ],
+        "title": "Burpees.io"
+      }
+    },
+    "skills": {
+      "s1": {
+        "title": "Java",
+        "value": 75
+      },
+      "s2": {
+        "title": "React",
+        "value": 80
+      },
+      "s3": {
+        "title": "Node.js"
+      },
+      "s4": {
+        "title": "RESTful Webservices and Microservices"
+      },
+      "s5": {
+        "title": "MySQL and Oracle DB"
+      },
+      "s6": {
+        "title": "AWS, Firebase, Vercel, Terraform, Helm"
+      }
+    }
+  }
